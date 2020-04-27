@@ -1,0 +1,20 @@
+body
+{
+background-image: url("../images/faces.jpg");
+background-attachment:fixed;
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+height: 100%;
+overflow: hidden;
+}
+.navbar{
+    padding-bottom: 10px;
+}
+.card{
+    display: inline-block;
+    padding: 10px;
+    margin-left: 190px;
+  
+}
+
