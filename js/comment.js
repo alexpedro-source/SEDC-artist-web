@@ -26,9 +26,10 @@ function writeComent(e){
 
     }).then(function(data){
         console.log(data )
-
+        setTimeout(function(){window.location="index.html";},3000);
+        document.getElementById("fillOnSubmit").innerText="Thank you for your comment!"
     }).catch(function (error){
         console.log(error)
     });
-
+   
 }
