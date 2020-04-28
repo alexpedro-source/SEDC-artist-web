@@ -1,5 +1,5 @@
 function writeComent(e){
-    e.peventDefault();
+    e.preventDefault();
     var form =e.target;
     var firstName=form.firstname.value;
     var lastName=form.lastname.value;
