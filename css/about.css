@@ -8,7 +8,7 @@ body{
     overflow: hidden;
 }
 .aboutPicture{
-    float: left;
+    
     width: 500px;
     height: 500px;
     display: inline-block;
