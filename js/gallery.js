@@ -1,53 +1,27 @@
-function drawGallery(name, imageSrc, imageAlt) {
-    divImage = document.createElement("div");
-    divImage.className = "container";
-
-    var imageElement = document.createElement("img");
-    imageElement.src = imageSrc;
-    imageElement.alt = imageAlt;
-    imageElement.className = "image"
-
-    var middleDiv = document.createElement("div");
-    middleDiv.className = ("middle")
-
-    var textDiv = document.createElement("div");
-    textDiv.className = ("text");
-    textDiv.innerText = name;
-
-    divImage.append(imageElement, middleDiv, textDiv);
-    return divImage
-
+fetch("https://raw.githubusercontent.com/alexpedro-source/SEDC-artist-web/master/data/gallery.json")
+.then(function(response){
+    return response.json()
+}).then(function (data){
+    drawImages(data)
+})
+function drawImages(arrayOfImages){
+ for (let i = 0; i < arrayOfImages.length; i++) {
+     var div= document.createElement("div");
+     div.setAttribute("class", "container")
+     var imageProperty=document.createElement("img");
+     imageProperty.setAttribute("src",arrayOfImages[i].image);
+     imageProperty.setAttribute("class","image")
+     imageProperty.style.width="100%";
+     middleDiv=document.createElement("div");
+     middleDiv.setAttribute("class","middle");
+     textDiv= document.createElement("div");
+     textDiv.innerText=arrayOfImages[i].name;
+     textDiv.setAttribute("class", "text")
+     
+    middleDiv.append(textDiv);     
+     div.append(imageProperty,middleDiv);
+     document.body.appendChild(div)
+ }
+    
 }
-
-var allImages;
-function getAllImages() {
-    fetch("https://raw.githubusercontent.com/alexpedro-source/SEDC-artist-web/master/data/gallery.json")
-        .then(function (res) {
-            return res.json();
-        }).then(function (data) {
-            
-
-            allImages = Object.keys(data).map(function (key) {
-                var newElement = {
-                    image: data[key].image,
-                    name: data[key].name
-                };
-                return newElement;
-
-            });
-            return drewElementsInGall(allImages);
-        }).catch(function (error){
-            console.log(error);
-        });
-
-}
-
-function drewElementsInGall(arrayOfImages) {
-    arrayOfImages.forEach(function (image) {
-        var galImage = drawGallery(
-            image.image,
-            image.name
-        );
-        document.getElementById("gallery").append(galImage)
-    });
-}
+drawImages()
