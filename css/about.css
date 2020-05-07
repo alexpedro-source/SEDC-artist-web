@@ -22,8 +22,9 @@ img{
 }
 .aboutText{
     background-color:white;
-    display: inline-block;
     
+    float: right;
+    margin-right: 20px;
     height: fit-content;
     width: 1050px;
     overflow: hidden;
@@ -34,9 +35,9 @@ img{
 .exhibitions{
     
     background-color:white;
+    display: inline-block;
    
-    float: right;
     height: fit-content;
-    width: 400px;
+    width: 1050px;
     
 }

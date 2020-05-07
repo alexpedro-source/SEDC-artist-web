@@ -9,6 +9,7 @@ function drawImages(arrayOfImages) {
     for (let i = 0; i < arrayOfImages.length; i++) {
         var div = document.createElement("div");
         div.setAttribute("class", "container");
+        
     
         var imageProperty = document.createElement("img");
         imageProperty.setAttribute("src", arrayOfImages[i].image);
@@ -29,3 +30,4 @@ function drawImages(arrayOfImages) {
 
 }
 drawImages()
+

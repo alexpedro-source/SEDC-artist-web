@@ -1,7 +1,7 @@
 function  setHeader(){
     var header=document.querySelector("header")
     header.innerHTML=`
-    <nav class="navbar navbar-expand-lg navbar-light bg-none">
+    <nav class="navbar navbar-expand-md navbar-light bg-transparent">
         <a id="logoOnclick" class="navbar-brand" href="#" onclick="">
             <img src="images/goran logo .png" height="100" width="100" alt="Goran Ristovski">
         </a>
@@ -23,6 +23,9 @@ function  setHeader(){
                 <li class="nav-item active">
                     <a class="nav-link" href="Contact.html">Contact</a>
                 </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="store.html">Store</a>
+            </li>
             </ul>
         </div>
     </nav>
@@ -41,3 +44,6 @@ function setFooter(){
 }
 setHeader();
 setFooter();
+document.getElementById("logoOnclick").onclick=function(){
+    location.href="index.html"
+}

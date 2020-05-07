@@ -11,32 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-none">
-        <a class="navbar-brand" href="#">
-            <img src="images/goran logo .png" height="100" width="100" alt="Goran Ristovski">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Gallery.html">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="About.html">About the Artist </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-
-    </nav>
+    <header></header>
     <div class="container">
         <form onsubmit="writeComent(event)" novalidate>
 
@@ -56,20 +31,18 @@
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" required placeholder="Write something.."
                 style="height:200px"></textarea>
-                
-                <p id="fillOnSubmit"></p>
-            
-                <input type="submit" value="Submit">
-           
+
+            <p id="fillOnSubmit"></p>
+
+            <input type="submit" value="Submit">
+
         </form>
 
     </div>
-
-    <script src="js/comment.js">
-    </script>
-    <script src="js/countries.js">
-
-    </script>
+    <footer></footer>
+    <script src="js/header-and-footer.js"></script>
+    <script src="js/comment.js"></script>
+    <script src="js/countries.js"> </script>
 </body>
 
 </html>

@@ -1,15 +1,14 @@
 body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bg{
-background-image:url(../images/vezilka.jpg);
+  background-image:url(../images/vezilka.jpg);
 height: 100%;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+  height: 100%;
+  margin: 0;
 }
+
+
 
 
 

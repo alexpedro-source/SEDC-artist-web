@@ -2,14 +2,19 @@ fetch("https://raw.githubusercontent.com/alexpedro-source/SEDC-artist-web/master
     .then(function (res) {
         return res.json()
     }).then(function (data) {
-        console.log(data);
+       console.log( Object.values(data));
         drawGallery(data);
+        var imagesWithSameName=data.filter(function(image){
+            return image.name===""
+        })
+
 
     })
+    
 
 function drawGallery(arrayOfArt) {
-
-    for (let i = 0; i < arrayOfArt.length; i++) {
+    
+     for (let i = 0; i < arrayOfArt.length; i++) {
         var div = document.createElement("div");
         div.setAttribute("class", "container")
         var header1 = document.createElement("h3")
