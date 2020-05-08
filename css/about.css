@@ -1,10 +1,10 @@
 body{
-    background-image: url(../images/About.jpg);
+    background-image: url(../images/About-min.jpg);
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    
+    font-family: 'Artifika';font-size: 13px;
     height: 100%;
     
 }

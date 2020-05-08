@@ -1,11 +1,6 @@
 body{
     background-color: white;
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-    height: 100%;
-    
+
 }
 .card {
     display: inline-block;
@@ -16,20 +11,30 @@ body{
 
 .container {
     position: relative;
-    max-width: 400px;
+    max-width: 300px;
     width: 30%;
     display: inline-block;
     cursor: pointer;
+    height: 100%;
   }
-
   
-  .image {
+  img.resize {
+    width:600px;
+    height:400px;
+  }
+  img.resize {
+    max-width:60%;
+    max-height:60%;
+  }
+  
+  .img {
     opacity: 1;
     display: block;
     width: 100%;
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
+    resize: 400px 400px;
   }
   
   .middle {
@@ -43,7 +48,7 @@ body{
     text-align: center;
   }
   
-  .container:hover .image {
+  .container:hover .img {
     opacity: 0.3;
   }
   
